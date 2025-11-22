@@ -1,67 +1,8 @@
-/* Brand color */
 :root {
   --mim-purple: #6A2FF3;
 }
 
-/* Header layout */
-.site-header {
-  border-bottom: 1px solid #eee;
-}
-
-/* Force any logo image in the header to a sane size */
-.site-header .wrapper img {
-  height: 32px !important;   /* tweak to 36–40 if you want slightly bigger */
-  width: auto !important;
-}
-
-
-
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 0;
-}
-
-/* Logo + title block */
-.site-title.brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: #111;
-}
-
-.site-title.brand:hover {
-  text-decoration: none;
-  opacity: 0.9;
-}
-
-/* Logo size */
-.brand-logo {
-  height: 32px !important;   /* Adjust this number if you want bigger (32–40 recommended) */
-  width: auto !important;
-  display: inline-block;
-}
-
-
-.brand-title {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-left: 8px;
-}
-
-/* Nav links */
-.site-nav .page-link {
-  margin-left: 16px;
-  color: #444;
-}
-
-.site-nav .page-link:hover {
-  color: var(--mim-purple);
-}
-
-/* Links in content */
+/* Brand link color override */
 a {
   color: var(--mim-purple);
 }
@@ -75,20 +16,6 @@ h1, h2, h3 {
   color: #111;
 }
 
-/* Home content spacing */
 .home {
   margin-top: 2rem;
-}
-
-/* Mobile: allow header to wrap nicely */
-@media screen and (max-width: 600px) {
-  .header-flex {
-    flex-wrap: wrap;
-    row-gap: 8px;
-  }
-
-  .site-nav .page-link {
-    margin-left: 0;
-    margin-right: 16px;
-  }
 }
