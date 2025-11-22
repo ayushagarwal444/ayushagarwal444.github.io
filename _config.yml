@@ -1,7 +1,7 @@
 title: "Model in Motion"
 description: "Sharp, grounded memos on AI strategy and productizing AI."
-url: "https://modelinmotion.github.io"
-baseurl: "/model-in-motion"   # keep this unless the repo name is different
+url: "https://ayushagarwal444.github.io"
+baseurl: ""
 
 theme: minima
 markdown: kramdown
