@@ -3,27 +3,53 @@
   --mim-purple: #6A2FF3;
 }
 
-/* Header title color */
-.site-title, .site-title:visited {
-  color: var(--mim-purple) !important;
-  font-weight: 700;
+/* Header layout */
+.site-header {
+  border-bottom: 1px solid #eee;
 }
 
-/* Navigation links */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+/* Logo + title block */
+.site-title.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #111;
+}
+
+.site-title.brand:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.brand-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Nav links */
 .site-nav .page-link {
-  color: #444 !important;
+  margin-left: 16px;
+  color: #444;
 }
 
 .site-nav .page-link:hover {
-  color: var(--mim-purple) !important;
+  color: var(--mim-purple);
 }
 
-/* Homepage intro spacing */
-.home {
-  margin-top: 2rem;
-}
-
-/* Links inside posts */
+/* Links in content */
 a {
   color: var(--mim-purple);
 }
@@ -32,19 +58,25 @@ a:hover {
   opacity: 0.8;
 }
 
-/* Headings accent */
+/* Headings */
 h1, h2, h3 {
   color: #111;
-  border-left: 4px solid var(--mim-purple);
-  padding-left: 8px;
 }
 
-/* Optional: purple underline accent under site title */
-.site-title::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: var(--mim-purple);
-  margin-top: 4px;
+/* Home content spacing */
+.home {
+  margin-top: 2rem;
+}
+
+/* Mobile: allow header to wrap nicely */
+@media screen and (max-width: 600px) {
+  .header-flex {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .site-nav .page-link {
+    margin-left: 0;
+    margin-right: 16px;
+  }
 }
