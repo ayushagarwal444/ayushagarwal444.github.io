@@ -10,3 +10,7 @@ markdown: kramdown
 header_pages:
   - about.md
   - archive.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
