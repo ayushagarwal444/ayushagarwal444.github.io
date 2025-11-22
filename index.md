@@ -1,6 +1,5 @@
 ---
 layout: home
-title: "Model in Motion"
 ---
 
 Model in Motion publishes strategic memos for founders, CTOs, and product leaders
