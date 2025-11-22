@@ -29,10 +29,13 @@
   opacity: 0.9;
 }
 
+/* Logo size */
 .brand-logo {
-  height: 40px;
-  width: 40px;
+  height: 32px !important;   /* Adjust this number if you want bigger (32–40 recommended) */
+  width: auto !important;
+  display: inline-block;
 }
+
 
 .brand-title {
   font-weight: 700;
