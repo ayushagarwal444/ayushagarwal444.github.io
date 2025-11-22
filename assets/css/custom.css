@@ -1,0 +1,50 @@
+/* Brand color */
+:root {
+  --mim-purple: #6A2FF3;
+}
+
+/* Header title color */
+.site-title, .site-title:visited {
+  color: var(--mim-purple) !important;
+  font-weight: 700;
+}
+
+/* Navigation links */
+.site-nav .page-link {
+  color: #444 !important;
+}
+
+.site-nav .page-link:hover {
+  color: var(--mim-purple) !important;
+}
+
+/* Homepage intro spacing */
+.home {
+  margin-top: 2rem;
+}
+
+/* Links inside posts */
+a {
+  color: var(--mim-purple);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Headings accent */
+h1, h2, h3 {
+  color: #111;
+  border-left: 4px solid var(--mim-purple);
+  padding-left: 8px;
+}
+
+/* Optional: purple underline accent under site title */
+.site-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--mim-purple);
+  margin-top: 4px;
+}
