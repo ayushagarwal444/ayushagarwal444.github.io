@@ -8,6 +8,14 @@
   border-bottom: 1px solid #eee;
 }
 
+/* Force any logo image in the header to a sane size */
+.site-header .wrapper img {
+  height: 32px !important;   /* tweak to 36–40 if you want slightly bigger */
+  width: auto !important;
+}
+
+
+
 .header-flex {
   display: flex;
   align-items: center;
@@ -40,6 +48,7 @@
 .brand-title {
   font-weight: 700;
   font-size: 1.1rem;
+  margin-left: 8px;
 }
 
 /* Nav links */
