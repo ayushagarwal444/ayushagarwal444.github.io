@@ -5,3 +5,8 @@ baseurl: ""
 
 theme: minima
 markdown: kramdown
+
+# Top navigation (we'll create these files next)
+header_pages:
+  - about.md
+  - archive.md
