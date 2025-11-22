@@ -2,7 +2,36 @@
   --mim-purple: #6A2FF3;
 }
 
-/* Brand link color override */
+/* Remove Minima's dark top border */
+.site-header {
+  border-top: none !important;
+}
+
+/* Brand styling for site title */
+.site-title {
+  position: relative;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+/* Purple accent underline under the brand name */
+.site-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 48px;
+  height: 3px;
+  background: #6A2FF3;
+}
+
+/* Global link color */
 a {
   color: var(--mim-purple);
 }
@@ -11,16 +40,11 @@ a:hover {
   opacity: 0.8;
 }
 
-/* Headings */
+/* Headings + spacing */
 h1, h2, h3 {
   color: #111;
 }
 
 .home {
   margin-top: 2rem;
-}
-
-/* Remove Minima's dark top border on the header */
-.site-header {
-  border-top: none !important;
 }
