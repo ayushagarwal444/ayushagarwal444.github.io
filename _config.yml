@@ -19,3 +19,14 @@ social:
   name: "Model in Motion"
   links:
     - https://ayushagarwal444.github.io
+
+sass:
+  load_paths:
+    - assets/css
+
+minima:
+  skin: classic  # keep default
+
+include:
+  - assets/css
+
