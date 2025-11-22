@@ -3,9 +3,13 @@
 }
 
 /* Remove Minima's dark top border */
+/* Remove Minima's header box-shadow (the faint black line at the top) */
 .site-header {
+  box-shadow: none !important;
   border-top: none !important;
+  border-bottom: 1px solid #eee; /* optional, keeps a clean divider */
 }
+
 
 /* Brand styling for site title */
 .site-title {
