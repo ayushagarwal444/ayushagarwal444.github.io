@@ -14,3 +14,8 @@ header_pages:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+social:
+  name: "Model in Motion"
+  links:
+    - https://ayushagarwal444.github.io
