@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Explainability Over Accuracy"
+date: 2025-11-29
+categories: ai productizing-ai
+---
+
+From what I’ve seen, AI projects fail more because users can’t understand them than because the models are inaccurate. In real deployments, trust becomes far more important for adoption than the accuracy numbers.
+
+In one of our earlier projects, we built a customer–agent mapping model meant to improve conversion rates by pairing each customer with the agent most likely to close. The model used 50+ variables, performed well in training, and looked strong on paper. But when we deployed it, our teams rejected it almost immediately.
+
+When we dug deeper, we realised that the failure wasn’t technical. The solution worked fine, but the model couldn’t attribute any decision to meaningful factors. There was no way to trace why Customer A was mapped to Agent B. Even our tech team struggled to articulate the contribution of individual variables. Without a transparent decision path, agents assumed the system was wrong — even when the math was sound.
+
+We rebuilt the solution with fewer features, clearer logic, and an explicit attribution layer that showed which factors influenced each recommendation. Once operators could see *why* a match was made, the resistance disappeared. Adoption rose sharply, and the debates around decisions dropped.
+
+**The lesson:** In AI, explainability is not optional. A slightly less accurate model that users trust beats a perfect model they refuse to use.
