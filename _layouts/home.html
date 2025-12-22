@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<main class="mim-home" aria-label="Content">
+  <!-- Hero -->
+  <section class="mim-hero">
+    <h1 class="mim-hero__title">Strategic clarity on turning AI into measurable business impact</h1>
+    <p class="mim-hero__subline">
+      Strategic memos for founders, CTOs, and product leaders who need clear, defensible decisions about productising AI.
+    </p>
+  </section>
+
+  <!-- How to use -->
+  <section class="mim-how">
+    <h2 class="mim-section__title">How to use Model in Motion</h2>
+    <ul class="mim-how__list">
+      <li><strong>Flagship memos</strong> - Long-form memos on productising AI</li>
+      <li><strong>Operator Notes</strong> - Signals capturing patterns, mistakes, and second-order effects</li>
+      <li><strong>Playbooks (coming)</strong> - Frameworks &amp; mental models for decision making.</li>
+    </ul>
+  </section>
+
+  <hr class="mim-divider" />
+
+  <!-- Recent memos -->
+  <section class="mim-recent">
+    <h2 class="mim-section__title">Recent memos</h2>
+
+    {%- if site.posts.size > 0 -%}
+      <ul class="mim-posts">
+        {%- for post in site.posts -%}
+          <li class="mim-posts__item">
+            <span class="mim-posts__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <a class="mim-posts__title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- else -%}
+      <p class="mim-empty">No memos yet.</p>
+    {%- endif -%}
+  </section>
+</main>
