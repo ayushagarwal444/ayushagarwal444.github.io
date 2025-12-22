@@ -2,16 +2,32 @@
   --mim-purple: #6A2FF3;
 }
 
-/* Remove Minima's dark top border */
-/* Remove Minima's header box-shadow (the faint black line at the top) */
+/* ============================= */
+/* Minima cleanup */
+/* ============================= */
+
+/* Remove Minima's dark top border + shadow */
 .site-header {
   box-shadow: none !important;
   border-top: none !important;
-  border-bottom: 1px solid #eee; /* optional, keeps a clean divider */
+  border-bottom: 1px solid #eee;
 }
 
+/* Reduce Minima's excessive page spacing */
+.home {
+  margin-top: 0 !important;
+}
 
-/* Brand styling for site title */
+/* Footer tightening */
+.site-footer {
+  margin-top: 2.5rem !important;
+  padding-top: 1.75rem !important;
+}
+
+/* ============================= */
+/* Brand */
+/* ============================= */
+
 .site-title {
   position: relative;
   font-weight: 700;
@@ -24,7 +40,7 @@
   opacity: 0.9;
 }
 
-/* Purple accent underline under the brand name */
+/* Purple accent underline */
 .site-title::after {
   content: "";
   position: absolute;
@@ -32,7 +48,7 @@
   bottom: -4px;
   width: 48px;
   height: 3px;
-  background: #6A2FF3;
+  background: var(--mim-purple);
 }
 
 /* Global link color */
@@ -41,79 +57,98 @@ a {
 }
 
 a:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-/* Headings + spacing */
+/* Headings */
 h1, h2, h3 {
   color: #111;
 }
-
-.home {
-  margin-top: 2rem;
-}
-
-
 
 /* ============================= */
 /* Model in Motion – Homepage */
 /* ============================= */
 
 .mim-home {
-  max-width: 860px;
+  max-width: 880px;
   margin: 0 auto;
-  padding: 3rem 1.25rem 4rem;
+  padding: 3.25rem 1.25rem 3rem;
 }
 
-/* Hero section */
+/* ---------- Hero ---------- */
+
 .mim-hero {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .mim-hero__title {
-  font-size: 2.2rem;
-  line-height: 1.15;
-  margin: 0 0 0.75rem;
+  font-size: 2.45rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.9rem;
 }
 
 .mim-hero__subline {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.65;
+  max-width: 72ch;
+  color: #2b2b2b;
   margin: 0;
-  max-width: 70ch;
-  color: #333;
 }
 
-/* Section titles */
+/* ---------- Section titles ---------- */
+
 .mim-section__title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin: 0 0 0.75rem;
+  margin: 2.5rem 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
-/* How to use section */
+/* ---------- How to use ---------- */
+
 .mim-how {
-  margin: 2rem 0 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.mim-how__list {
-  margin: 0;
-  padding-left: 1.25rem;
+.mim-how__items {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
 }
 
-.mim-how__list li {
-  margin: 0.5rem 0;
+.mim-how__item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 1rem;
+  padding: 0.95rem 1.1rem;
+}
+
+.mim-how__item + .mim-how__item {
+  border-top: 1px solid #eee;
+}
+
+.mim-how__label {
+  font-weight: 700;
+  color: #111;
+}
+
+.mim-how__desc {
+  color: #333;
   line-height: 1.6;
 }
 
-/* Divider */
+/* ---------- Divider ---------- */
+
 .mim-divider {
-  margin: 2rem 0 1.5rem;
+  margin: 2.75rem 0 1.75rem;
   border: 0;
   border-top: 1px solid #eee;
 }
 
-/* Recent memos */
+/* ---------- Recent memos ---------- */
+
 .mim-posts {
   list-style: none;
   margin: 0;
@@ -121,21 +156,25 @@ h1, h2, h3 {
 }
 
 .mim-posts__item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 120px 1fr;
   gap: 1rem;
-  align-items: baseline;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.mim-posts__item:last-child {
+  border-bottom: none;
 }
 
 .mim-posts__date {
-  min-width: 110px;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.92rem;
+  color: #6b6b6b;
 }
 
 .mim-posts__title {
+  font-weight: 600;
   text-decoration: none;
-  color: var(--mim-purple);
 }
 
 .mim-posts__title:hover {
