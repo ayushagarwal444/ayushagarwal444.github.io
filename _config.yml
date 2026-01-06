@@ -2,7 +2,7 @@ title: "Model in Motion"
 description: "Sharp, grounded memos on AI strategy and productizing AI."
 url: "https://ayushagarwal444.github.io"
 baseurl: ""
-
+future: true
 theme: minima
 markdown: kramdown
 
