@@ -1,8 +1,10 @@
+---
+---
+
 /* ============================= */
 /* Variables & Global Setup      */
 /* ============================= */
----
----
+
 :root {
   --mim-purple: #6A2FF3;
   --text-main: #1a1a1a;
@@ -22,6 +24,11 @@ body {
 /* ============================= */
 /* Minima Override & Cleanup     */
 /* ============================= */
+
+/* Target the class Minima uses to remove its default padding */
+.page-content {
+  padding: 0 !important;
+}
 
 .site-header {
   box-shadow: none !important;
@@ -57,9 +64,9 @@ body {
 /* ============================= */
 
 .mim-home {
-  max-width: 820px; /* Slightly tighter for better readability */
+  max-width: 820px;
   margin: 0 auto;
-  padding: 4rem 1.25rem;
+  padding: 4rem 1.25rem; /* Re-adding the padding here for the content */
 }
 
 /* ---------- Hero ---------- */
