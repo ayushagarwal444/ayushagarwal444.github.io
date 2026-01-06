@@ -1,0 +1,49 @@
+<main class="mim-home" aria-label="Content">
+  <section class="mim-hero">
+    <h1 class="mim-hero__title">Strategic clarity on turning AI into measurable business impact</h1>
+    <p class="mim-hero__subline">
+      Strategic memos for founders, CTOs, and product leaders who need clear, defensible decisions about productising AI.
+    </p>
+  </section>
+
+  <section class="mim-how" aria-label="How to use Model in Motion">
+    <h2 class="mim-section__title">How to use Model in Motion</h2>
+
+    <div class="mim-how__items">
+      <div class="mim-how__item">
+        <div class="mim-how__label">Flagship memos</div>
+        <div class="mim-how__desc">Long-form memos on productising AI</div>
+      </div>
+
+      <div class="mim-how__item">
+        <div class="mim-how__label">Operator Notes</div>
+        <div class="mim-how__desc">Signals capturing patterns, mistakes, and second-order effects</div>
+      </div>
+
+      <div class="mim-how__item">
+        <div class="mim-how__label">Playbooks (coming)</div>
+        <div class="mim-how__desc">Frameworks &amp; mental models for decision making.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="mim-divider" />
+
+  <section class="mim-recent" aria-label="Recent memos">
+    <h2 class="mim-section__title">Recent memos</h2>
+
+    {% if site.posts and site.posts.size > 0 %}
+      <ul class="mim-posts">
+        {% for post in site.posts limit: 10 %}
+          <li class="mim-posts__item">
+            <span class="mim-posts__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <a class="mim-posts__title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="mim-empty">No memos yet.</p>
+      <p class="mim-empty">If you’ve added posts, check the filename format: <code>YYYY-MM-DD-title.md</code> and ensure each post has front matter.</p>
+    {% endif %}
+  </section>
+</main>
