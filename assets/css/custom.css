@@ -1,153 +1,147 @@
+/* ============================= */
+/* Variables & Global Setup      */
+/* ============================= */
+
 :root {
   --mim-purple: #6A2FF3;
+  --text-main: #1a1a1a;
+  --text-muted: #666666;
+  --bg-light: #f9f9fb;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
 }
 
 /* ============================= */
-/* Minima cleanup */
+/* Minima Override & Cleanup     */
 /* ============================= */
 
-/* Remove Minima's dark top border + shadow */
 .site-header {
   box-shadow: none !important;
   border-top: none !important;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
 }
-
-/* Reduce Minima's excessive page spacing */
-.home {
-  margin-top: 0 !important;
-}
-
-/* Footer tightening */
-.site-footer {
-  margin-top: 2.5rem !important;
-  padding-top: 1.75rem !important;
-}
-
-/* ============================= */
-/* Brand */
-/* ============================= */
 
 .site-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
   position: relative;
-  font-weight: 700;
-  color: #111;
-  text-decoration: none;
 }
 
-.site-title:hover {
-  text-decoration: none;
-  opacity: 0.9;
-}
-
-/* Purple accent underline */
+/* The Purple Accent Line */
 .site-title::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
-  width: 48px;
+  bottom: -2px;
+  width: 32px;
   height: 3px;
   background: var(--mim-purple);
 }
 
-/* Global link color */
-a {
-  color: var(--mim-purple);
-}
-
-a:hover {
-  opacity: 0.85;
-}
-
-/* Headings */
-h1, h2, h3 {
-  color: #111;
+.site-nav .page-link {
+  font-weight: 500;
+  color: var(--text-main) !important;
 }
 
 /* ============================= */
-/* Model in Motion – Homepage */
+/* Model in Motion – Homepage    */
 /* ============================= */
 
 .mim-home {
-  max-width: 880px;
+  max-width: 820px; /* Slightly tighter for better readability */
   margin: 0 auto;
-  padding: 3.25rem 1.25rem 3rem;
+  padding: 4rem 1.25rem;
 }
 
 /* ---------- Hero ---------- */
 
 .mim-hero {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .mim-hero__title {
-  font-size: 2.45rem;
+  font-size: 2.8rem;
   line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin: 0 0 0.9rem;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.2rem;
+  font-weight: 800;
+  color: #000;
 }
 
 .mim-hero__subline {
-  font-size: 1.1rem;
-  line-height: 1.65;
-  max-width: 72ch;
-  color: #2b2b2b;
-  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 65ch;
+  color: #444;
 }
 
-/* ---------- Section titles ---------- */
+/* ---------- Section Headings ---------- */
 
 .mim-section__title {
-  margin: 2.5rem 0 1rem;
-  font-size: 1.15rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
 }
 
-/* ---------- How to use ---------- */
+/* ---------- "How to Use" Cards ---------- */
 
 .mim-how {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .mim-how__items {
-  border: 1px solid #eee;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #fff;
+  background: var(--bg-light);
+  border-radius: 16px;
+  padding: 8px;
+  border: 1px solid var(--border-color);
 }
 
 .mim-how__item {
   display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 1rem;
-  padding: 0.95rem 1.1rem;
+  grid-template-columns: 180px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+
+/* Subtle hover effect */
+.mim-how__item:hover {
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .mim-how__item + .mim-how__item {
-  border-top: 1px solid #eee;
+  margin-top: 4px;
 }
 
 .mim-how__label {
   font-weight: 700;
-  color: #111;
+  color: var(--mim-purple);
+  font-size: 0.95rem;
 }
 
 .mim-how__desc {
+  font-size: 1rem;
   color: #333;
-  line-height: 1.6;
 }
 
-/* ---------- Divider ---------- */
+/* ---------- Recent Memos (The List) ---------- */
 
-.mim-divider {
-  margin: 2.75rem 0 1.75rem;
-  border: 0;
-  border-top: 1px solid #eee;
+.mim-recent {
+  margin-top: 4rem;
 }
-
-/* ---------- Recent memos ---------- */
 
 .mim-posts {
   list-style: none;
@@ -157,26 +151,69 @@ h1, h2, h3 {
 
 .mim-posts__item {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 1rem;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.mim-posts__item:last-child {
-  border-bottom: none;
+  grid-template-columns: 140px 1fr;
+  align-items: baseline;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .mim-posts__date {
-  font-size: 0.92rem;
-  color: #6b6b6b;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
 .mim-posts__title {
+  font-size: 1.1rem;
   font-weight: 600;
+  color: var(--text-main);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .mim-posts__title:hover {
+  color: var(--mim-purple);
   text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- UI Elements ---------- */
+
+.mim-divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 4rem 0;
+}
+
+/* ============================= */
+/* Mobile Responsiveness         */
+/* ============================= */
+
+@media (max-width: 650px) {
+  .mim-hero__title {
+    font-size: 2.1rem;
+  }
+
+  .mim-how__item {
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 0.25rem;
+    padding: 1.25rem;
+  }
+
+  .mim-posts__item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 1rem 0;
+  }
+
+  .mim-posts__date {
+    font-size: 0.75rem;
+    order: 2; /* Date moves below title on mobile */
+  }
+
+  .mim-posts__title {
+    order: 1;
+    font-size: 1rem;
+  }
 }
